@@ -15,6 +15,12 @@ This is a coding challenge for prospective front-end developer applicants applyi
 - [ ] The grid should be responsive, and should work in both portrait and landscape orientations on both mobile and desktop browsers.
 - [ ] You're free to use existing open source React components or Javascript packages/libraries from npm to complete this task.
 - [ ] Once you are ready to share your code, you should push it to your forked repo and create Pull Request to the original repo (main branch). (You can read more about the process in this blog: https://akrabat.com/the-beginners-guide-to-contributing-to-a-github-project/)
+
+### Bonus points: 
+- [ ] Bonus points if you manage to create the app in Gatsby : https://v3.gatsbyjs.com/docs/.
+- [ ]  We recommend using the **version 3** Gatsby in combination with **gatsby-source-unsplash** :https://www.gatsbyjs.com/plugins/gatsby-source-unsplash/?=unsplash and **gatsby-plugin-image** https://www.gatsbyjs.com/plugins/gatsby-plugin-image/ to get the data by using the **Gatsby GraphQL dashboard**. 
+
+
 ### Evaluation:
 - [ ] The React app should build without errors (typically using `npm run build`). If there are necessary steps required to get it to compile, those should be covered in README.md.
 - [ ] No crashes or bugs.
