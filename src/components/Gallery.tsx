@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import useGetRandomUnsplashImages from '../hooks/useGetRandomUnsplashImages';
 import GalleryImage from './GalleryImage';
 import GalleryFooter from './GalleryFooter';
@@ -6,12 +6,14 @@ import MasonryGrid from './templates/MasonryGrid';
 
 const Gallery = () => {
   const { images, isLoading, isError } = useGetRandomUnsplashImages();
+  const firstImageRef = useRef<HTMLDivElement>(null);
 
-  const galleryImages = images.map(image => {
+  const galleryImages = images.map((image, i) => {
     const { id, link, desc, width, height, author, attributionLink } = image;
     return (
       <React.Fragment key={id}>
         <GalleryImage
+          ref={i === 0 ? firstImageRef : null}
           id={id}
           link={link}
           desc={desc}
@@ -22,6 +24,11 @@ const Gallery = () => {
         />
       </React.Fragment>
     );
+  });
+
+  // Focus first image when the gallery renders
+  useEffect(() => {
+    firstImageRef?.current?.focus();
   });
 
   /*  We can handle different states here, instead of returning `null`, e.g.:
