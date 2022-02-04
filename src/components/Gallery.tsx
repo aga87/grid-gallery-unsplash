@@ -12,6 +12,7 @@ const Gallery = () => {
     return (
       <React.Fragment key={id}>
         <GalleryImage
+          id={id}
           link={link}
           desc={desc}
           width={width}

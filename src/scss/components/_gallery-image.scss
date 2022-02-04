@@ -1,15 +1,42 @@
 .gallery-image {
   text-align: center;
 
+  &__interactive-image-wrapper:focus {
+    outline: 6px solid $yellow;
+  }
+
   &__image {
     display: none;
+    margin-bottom: 5px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &.gallery-image__image--secondary {
+      margin-bottom: 20px;
+
+      &:hover {
+        cursor: unset;
+      }
+    }
 
     &.gallery-image__image--loaded {
-      display: inline-block;
+      display: block;
+    }
+  }
+
+  &__caption {
+    &.gallery-image__caption--secondary {
+      color: $white;
     }
   }
 
   &__attr-link {
     display: inline-block; // avoid link break within the link where possible
+
+    &.gallery-image__attr-link--secondary {
+      color: $yellow;
+    }
   }
 }
