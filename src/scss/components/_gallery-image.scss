@@ -1,6 +1,14 @@
 .gallery-image {
   text-align: center;
 
+  &__image {
+    display: none;
+
+    &.gallery-image__image--loaded {
+      display: inline-block;
+    }
+  }
+
   &__attr-link {
     display: inline-block; // avoid link break within the link where possible
   }

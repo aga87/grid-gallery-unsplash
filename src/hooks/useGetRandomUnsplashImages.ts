@@ -5,6 +5,8 @@ type Image = {
   id: string;
   link: string;
   desc: string;
+  width: number;
+  height: number;
   author: string;
   attributionLink: string;
 };
@@ -13,6 +15,8 @@ type Image = {
 type ResultItem = {
   id: string;
   description: string;
+  width: number;
+  height: number;
   urls: {
     regular: string;
   };
@@ -49,6 +53,8 @@ const useGetRandomUnsplashImages = () => {
           id: image.id,
           link: image.urls.regular,
           desc: image.description || '',
+          width: image.width,
+          height: image.height,
           // Attribution is required by Unsplash: https://help.unsplash.com/en/articles/2511315-guideline-attribution
           author: image.user.name,
           attributionLink: `${image.user.links.html}?utm_source=gallery&utm_medium=referral`

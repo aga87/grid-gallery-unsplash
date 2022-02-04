@@ -8,12 +8,14 @@ const Gallery = () => {
   const { images, isLoading, isError } = useGetRandomUnsplashImages();
 
   const galleryImages = images.map(image => {
-    const { id, link, desc, author, attributionLink } = image;
+    const { id, link, desc, width, height, author, attributionLink } = image;
     return (
       <React.Fragment key={id}>
         <GalleryImage
           link={link}
           desc={desc}
+          width={width}
+          height={height}
           attributionLink={attributionLink}
           author={author}
         />
