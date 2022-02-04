@@ -2,6 +2,7 @@ import React from 'react';
 import useGetRandomUnsplashImages from '../hooks/useGetRandomUnsplashImages';
 import GalleryImage from './GalleryImage';
 import GalleryFooter from './GalleryFooter';
+import MasonryGrid from './templates/MasonryGrid';
 
 const Gallery = () => {
   const { images, isLoading, isError } = useGetRandomUnsplashImages();
@@ -28,8 +29,8 @@ const Gallery = () => {
   if (images.length === 0 || isLoading || isError) return null;
 
   return (
-    <section>
-      {galleryImages}
+    <section className='gallery'>
+      <MasonryGrid>{galleryImages}</MasonryGrid>
       <GalleryFooter />
     </section>
   );

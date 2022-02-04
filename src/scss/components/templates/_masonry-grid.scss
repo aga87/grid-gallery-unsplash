@@ -1,0 +1,17 @@
+// See https://www.npmjs.com/package/react-masonry-css
+
+.masonry-grid {
+  $spacing: 20px;
+  display: flex;
+  margin-left: -$spacing; // gutter size offset
+  width: auto;
+
+  &__column {
+    padding-left: $spacing; // gutter size
+    background-clip: padding-box;
+  }
+
+  &__item {
+    margin-bottom: $spacing;
+  }
+}
