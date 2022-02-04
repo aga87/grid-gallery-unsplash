@@ -13,11 +13,16 @@ const GalleryImage = ({
   author,
   attributionLink
 }: GalleryImageProps) => (
-  <figure>
+  <figure className='gallery-image'>
     <img src={link} alt={desc} />
     <figcaption>
-      Photo by
-      <a href={attributionLink} target='_blank' rel='noreferrer'>
+      Photo by{' '}
+      <a
+        href={attributionLink}
+        target='_blank'
+        rel='noreferrer'
+        className='gallery-image__attr-link'
+      >
         {author}
       </a>
     </figcaption>

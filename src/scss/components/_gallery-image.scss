@@ -1,0 +1,7 @@
+.gallery-image {
+  text-align: center;
+
+  &__attr-link {
+    display: inline-block; // avoid link break within the link where possible
+  }
+}

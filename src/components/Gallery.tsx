@@ -30,7 +30,9 @@ const Gallery = () => {
 
   return (
     <section className='gallery'>
-      <MasonryGrid>{galleryImages}</MasonryGrid>
+      <div className='gallery__content'>
+        <MasonryGrid>{galleryImages}</MasonryGrid>
+      </div>
       <GalleryFooter />
     </section>
   );
